@@ -27,12 +27,41 @@
     flex-direction: column;
     padding: 0px 200px 20px 200px;
     margin: 0;
+
 }
 
 .score{
     display: flex;
     flex-grow: 1;
+    gap: 20pt;
+    justify-content: center;
+}
+
+.player-score,
+.computer-score,
+.total-matches{
+    font-size: 20px;
+}
+
+.decisions{
+    display: flex;
+    flex-direction: column;
+    gap: 30pt;
+    margin: 0px 150px 20px 150px;
+    padding: 40px;
+    border: 2pt solid black;
+    border-radius: 10pt;
+    flex-grow: 2;
+    font-size: 25px;
+}
+
+.pulls{
+    display: flex;
     justify-content: space-between;
+}
+
+.decider{
+    align-self: center;
 }
 
 .buttons{
