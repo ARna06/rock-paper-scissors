@@ -12,6 +12,8 @@ const compSelec = document.querySelector('.compSelec');
 const playerSelec = document.querySelector('.playerSelec');
 const decider = document.querySelector('.decider');
 
+const declaration = document.querySelector('.Result-Declarer');
+
 function getRandomNumber(num) {
     return Math.floor(num * Math.random());
 }
@@ -55,7 +57,16 @@ rock.addEventListener('click',() => {
     playerSelec.textContent = `You have choosen ${playerSelection}`;
     totalMatch = totalMatch + 1;
     totalMatches.textContent = `Total number of matches played: ${totalMatch}`;
+
+    if (playerWin == 5 || computerWin == 5) {
+        if(playerWin >= computerWin){
+            declaration.textContent = `You have won the match, however you may continue playing!`;
+        }else{
+            declaration.textContent = `You have lost the match! however you may continue playing`;
+        }
+    };
 });
+
 paper.addEventListener('click', () => {
     let computerSelection = getComputerChoice();
     let playerSelection = "Paper";
@@ -78,7 +89,17 @@ paper.addEventListener('click', () => {
     playerSelec.textContent = `You have choosen ${playerSelection}`;
     totalMatch = totalMatch + 1;
     totalMatches.textContent = `Total number of matches played: ${totalMatch}`;
-    });
+
+
+    if (playerWin == 5 || computerWin == 5) {
+        if(playerWin >= computerWin){
+            declaration.textContent = `You have won the match, however you may continue playing!`;
+        }else{
+            declaration.textContent = `You have lost the match! however you may continue playing`;
+        }
+    };
+});
+
 scissors.addEventListener('click', () => {
     let computerSelection = getComputerChoice();
     let playerSelection = "Scissors";
@@ -101,4 +122,13 @@ scissors.addEventListener('click', () => {
     playerSelec.textContent = `You have choosen ${playerSelection}`;
     totalMatch = totalMatch + 1;
     totalMatches.textContent = `Total number of matches played: ${totalMatch}`;
+
+
+    if (playerWin == 5 || computerWin == 5) {
+        if(playerWin >= computerWin){
+            declaration.textContent = `You have won the match, however you may continue playing!`;
+        }else{
+            declaration.textContent = `You have lost the match! however you may continue playing`;
+        }
+    };
 });

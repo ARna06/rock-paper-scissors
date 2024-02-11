@@ -89,3 +89,15 @@ img{
     border: 2pt solid black;
     border-radius: 40pt;
 }
+
+.Result-Declarer{
+    padding: 50px;
+    margin: 20px 200px 20px 200px;
+    font-size: 30pt;
+    font-weight: 900;
+    text-align: center;
+    flex-grow: 1;
+    background-color: beige;
+    color: violet;
+    border-radius: 50pt;
+}
